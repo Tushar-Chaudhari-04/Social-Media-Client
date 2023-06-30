@@ -9,11 +9,11 @@ import { getFeedData } from "../../redux/slice/feedSlice";
 const Feed = () => {
   const dispatch = useDispatch();
   var feedData = useSelector((state) => state.feedReducer?.feedData);
-  console.log("feedData...", feedData?.posts);
+  //console.log("feedData...", feedData?.posts);
 
   useEffect(() => {
     dispatch(getFeedData());
-  }, [feedData,dispatch]);
+  }, [dispatch]);
 
   return (
     <div className="feed">

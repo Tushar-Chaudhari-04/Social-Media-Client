@@ -10,8 +10,14 @@ import store from "../redux/store";
 import { setLoading, showToast } from "../redux/slice/appConfigSlice";
 import { TOAST_FAILURE } from "../App";
 
+let origin=process.env.REACT_APP_LOCAL_SERVER_BASE_URL
+console.log("process.env.NODE_ENV",process.env.NODE_ENV);
+if(process.env.NODE_ENV==='production'){
+    origin=process.env.REACT_APP_SERVER_BASE_URL
+}
+
 export const axiosClient = axios.create({
-  baseURL: process.env.REACT_APP_SERVER_BASE_URL,
+  baseURL: origin,
   //   withCredentials: true,
 });
 

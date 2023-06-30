@@ -64,7 +64,7 @@ const Login = () => {
     
       setTimeout(() => {
         navigate("/");
-      }, 4000);
+      }, 2000);
     } else {
       setError(response.data.message);
 
@@ -86,7 +86,7 @@ const Login = () => {
 
       setTimeout(() => {
         navigate("/login");
-      }, 5000);
+      }, 3000);
       
     }
     console.log("error", error);
